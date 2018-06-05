@@ -1,7 +1,18 @@
 
 class Player:
     #hit function
-    #stop function
+    def hitOrStop():
+        card_total = player_cardOne + player_cardTwo
+        while True:
+            print('Your total hand is {}'.format(card_total))
+            player_turn = input('Would you like to hit or stop? 1 for hit, 2 for stop: ')
+
+            if int(player_turn) == 1:
+                card_total += newCard
+            elif int(player_turn) == 2:
+                print('You chose to stop - the dealer will now play.')
+                break
+   
     #value function
     #checkBankroll function
     pass
@@ -23,6 +34,6 @@ class Card:
     def __init__(self, value, suit):
         self.value = value
         self.suit = suit
-    
+
     #suits (each suit contains 13 cards- Ace through King)
     pass
